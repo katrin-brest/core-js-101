@@ -106,7 +106,7 @@ function chainPromises(array, action) {
         .catch((err) => reject(err));
     }
   }).then((results) => results.reduce(action))
-    .catch((err) => console.log(err));
+    .catch((err) => err);
 }
 
 module.exports = {
